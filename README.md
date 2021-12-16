@@ -26,26 +26,26 @@ Specifically, we'll go through the following steps:
 Let's review the process for setting up your local repo. Follow along with the
 steps below:
 
-1. Choose a name for your project. You can call it anything you like - be
-   creative! For our example here, we'll use `my-personal-website`.
+**1.** Choose a name for your project. You can call it anything you like - be
+creative! For our example here, we'll use `my-personal-website`.
 
-2. Make sure you're in the `Development/code` directory (or wherever you're
-   storing your code), then create your project directory and `cd` into it:
+**2.** Make sure you're in the `Development/code` directory (or wherever you're
+storing your code), then create your project directory and `cd` into it:
 
 ```console
 $ mkdir my-personal-website
 $ cd my-personal-website
 ```
 
-3. Initialize the directory as a Git repo (make sure you've `cd`d into the
-   directory first):
+**3.** Initialize the directory as a Git repo (make sure you've `cd`d into the
+directory first):
 
 ```console
 $ git init
 ```
 
-**Check your work**: If you see the message "Initialized empty Git repository
-in /Users/your-username/Development/code/your-directory-name/.git/", you have
+**Check your work**: If you see the message "Initialized empty Git repository in
+/Users/your-username/Development/code/your-directory-name/.git/", you have
 successfully set up your directory as a Git repo.
 
 The next step is to add some content.
@@ -72,11 +72,12 @@ instead.
 **A Note about README files**: The [README.md file][github-readme] is an
 important piece of the documentation of your project. It is the first thing
 people will see when they visit your repo on GitHub. Generally, as you build
-your own projects, you'll want to get in the habit of [creating a good README][makeareadme.com],
-including things like what your project does, how to install and run the code,
-etc. While filling out the content in your README is optional for the prework
-project, you _will_ need to create them for later projects. Check out the
-resources listed at the bottom of this lesson to learn more.
+your own projects, you'll want to get in the habit of [creating a good
+README][makeareadme.com], including things like what your project does, how to
+install and run the code, etc. While filling out the content in your README is
+optional for the prework project, you _will_ need to create them for later
+projects. Check out the resources listed at the bottom of this lesson to learn
+more.
 
 **Check your work**: In VS Code, make sure the README.md file is present and
 contains the header you just created before continuing with the instructions.
@@ -87,7 +88,7 @@ Now that we've created our project repo and added some content, it's time to
 make our first commit. First, though, let's check the status of our repo:
 
 ```console
-git status
+$ git status
 ```
 
 You should see the following:
@@ -105,7 +106,8 @@ nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 This tells us that Git sees our new file but is not currently tracking it. So to
-**add** it to the list of tracked files, then create our first commit, we'll run:
+**add** it to the list of tracked files, then create our first commit, we'll
+run:
 
 ```console
 $ git add README.md
@@ -134,20 +136,20 @@ changes. Now let's create a remote and connect our local repo to it.
 ## Create Your Remote Repo
 
 To create a new GitHub repository, go to
-[https://github.com/](https://github.com/), click the **+** icon in the
-upper-right corner of the screen, and choose 'New repository' in the drop-down
-menu.
+[https://github.com/](https://github.com/) and sign in (if you aren't already
+signed in). Then, click the **+** icon in the upper-right corner of the screen,
+and choose 'New repository' in the drop-down menu.
 
 ![new repo drop down](https://curriculum-content.s3.amazonaws.com/phase-0/project-prep-part-i/new-repo.png)
 
 This will bring you to a page where you can give the new repository a name.
-There will be some other settings as well which we'll leave as they are:
+There will be some other settings as well, which we'll leave as they are:
 
 ![set new repo name](https://curriculum-content.s3.amazonaws.com/phase-0/project-prep-part-i/set-new-repo-name.png)
 
 Enter the same name you used for your local repo. (Note: you aren't required to
 use the same name, but we recommend doing so to keep things simple.) Once the
-repository is given a name, go ahead and click the "Create Repository" button.
+repository is given a name, go ahead and click the "Create repository" button.
 
 ![create repo](https://curriculum-content.s3.amazonaws.com/phase-0/project-prep-part-i/github-pages-create-repository.png)
 
@@ -171,7 +173,7 @@ The first option is the one we used in the previous lesson:
 
 ![quick setup](https://curriculum-content.s3.amazonaws.com/phase-0/project-prep-part-i/quick-setup.png)
 
-We copied the URL and then used the `git add remote origin` command to connect
+We copied the URL and then used the `git remote add origin` command to connect
 our local repo to the remote repo.
 
 Let's take a look at the other options that are provided. The second option
@@ -184,7 +186,7 @@ terminal, either one at a time or all together. However if you take a look at
 the commands, you'll see that we've already done the first four:
 
 1. `echo "# example-repository" >> README.md` creates a `README.md` file and
-   adds some markdown.
+   adds some markdown
 2. `git init` initializes a local repository in the folder you're currently in
    on the command line
 3. `git add README.md` stages the newly created `README.md` file, getting it
@@ -204,38 +206,32 @@ first three setup options listed are three different ways of doing the exact
 same thing; GitHub is just providing the commands for us as a shortcut, so we
 don't need to type them all out by hand.
 
-We'll use this last set of commands in just a moment but, before we do that,
-let's take a look at the last option:
-
-![import code](https://curriculum-content.s3.amazonaws.com/phase-0/project-prep-part-i/import-code.png)
-
-You would use this option if you wanted to use an existing repository as a
-template for your project. If you click the "Import code" button, it will take
-you to a new page where you could enter the URL for the project you want to
-import. Once you imported the template code, you would clone the repo locally
-and start modifying it.
-
-But now let's go back to previous option, labeled "push an existing repository
-from the command line," and take a moment to review what each command does.
-As we mentioned above, two of the three should look familiar:
+Let's take a moment to review what each command does. As we mentioned above, two
+of the three should look familiar:
 
 1. `git remote add origin git@github...` adds a new remote — called `origin` —
    to the local repository and associates it with the remote repository.
 2. `git branch -M main` is the only command you haven't learned about yet — it
-   ensures that the default repository branch is set to `main`. (You should
-   already be configured to use `main` as the default, but it won't hurt to run
-   the command.)
+   renames the current branch of your repository to `main`. (You should already
+   be configured to use `main` as the default branch; if so, running this
+   command is unnecessary. You can verify the name of your branch by running
+   `git branch --show-current`.)
 3. `git push -u origin main` pushes the initial commit we did earlier to the
    remote repository; the `u` flag sets `origin` as the default remote for the
    `main` branch.
 
-Go ahead and run these three commands — you can run them one at a time or all
+Go ahead and run these commands — you can run them one at a time or all
 together, as you prefer.
 
 **Check your work**: When you run the commands above, the last thing you should
-see is the line "Branch 'main' set up to track remote branch 'main' from
-'origin'." You can also check in GitHub by going to the repo and refreshing the
-page; you should see that the `README.md` file now appears on GitHub.
+see is the line:
+
+```console
+"Branch 'main' set up to track remote branch 'main' from 'origin'."
+```
+
+You can also check in GitHub by going to the repo and refreshing the page; you
+should see that the `README.md` file now appears on GitHub.
 
 ## Conclusion
 
@@ -263,5 +259,6 @@ GitHub Pages.
 - [GitHub: About READMEs][github-readme]
 - [makeareadme.com][]
 
-[github-readme]: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
+[github-readme]:
+  https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
 [makeareadme.com]: https://www.makeareadme.com/
