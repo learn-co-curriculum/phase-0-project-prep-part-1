@@ -1,17 +1,18 @@
-# Prework Final Project Prep Part I: Setting Up Your Repo
+# Software Engineering Prep Final Project Prep Part I: Setting Up Your Repo
 
 ## Learning Goals
 
-- Set up your local and remote repositories for your final prework project
+- Set up your local and remote repositories for your final Software Engineering
+  Prep project
 
 ## Introduction
 
 Now that you've learned about Git version control, it's time to put your new
 skills to use!
 
-In the next section, as the final requirement for the prework, you'll be
-creating a personal website! In this lesson, you'll get some practice with Git
-and get set up for your final project at the same time.
+In the next section, as the final requirement for Software Engineering Prep,
+you'll be creating a personal website! In this lesson, you'll get some practice
+with Git and get set up for your final project at the same time.
 
 Specifically, we'll go through the following steps:
 
@@ -75,9 +76,9 @@ people will see when they visit your repo on GitHub. Generally, as you build
 your own projects, you'll want to get in the habit of [creating a good
 README][makeareadme.com], including things like what your project does, how to
 install and run the code, etc. While filling out the content in your README is
-optional for the prework project, you _will_ need to create them for later
-projects. Check out the resources listed at the bottom of this lesson to learn
-more.
+optional for the Software Engineering Prep project, you _will_ need to create
+them for later projects. Check out the resources listed at the bottom of this
+lesson to learn more.
 
 **Check your work**: In VS Code, make sure the README.md file is present and
 contains the header you just created before continuing with the instructions.
