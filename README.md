@@ -1,4 +1,4 @@
-# Software Engineering Prep Final Project Prep Part I: Setting Up Your Repo
+# Software Engineering Prep Final Project Setup Part I: Setting Up Your Repo
 
 ## Learning Goals
 
