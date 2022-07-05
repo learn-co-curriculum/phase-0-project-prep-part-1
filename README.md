@@ -53,7 +53,7 @@ The next step is to add some content.
 
 ## Create Some Content
 
-Let's go ahead and open our new project in VS Code. From inside the
+Go ahead and open your new project in VS Code. From inside the
 `my-personal-website` directory (or whatever you've named yours), type `code .`.
 Next, create a README file:
 
